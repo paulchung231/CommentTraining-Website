@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>NYT Comment Rating Test Front End</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'trainingApp/trainingStyle.css' %}">
+    <!-- <link rel="stylesheet" href="trainingStyle.css"> -->
+    <script src="{% static 'trainingApp/trainingJs.js' %}"></script>
+
+</head>
+<!--<body style="background-color: aliceblue">-->
+<body style="font-family: 'Helvetica Neue'">
+
+    <h1>NYT Comment Engagement Training</h1>
+
+    <!-- Testing how view passes in context to the HTML -->
+    <!-- <h2>{{first_comment.comment_text}}</h2> -->
+
+    <hr> <!-- Thematic break-->
+
+    <p id="instructions">Use this interface to rate the level of engagement of a random initial comment from the New York Times.</p>
+
+    <div id="comment_block"><p id="comment">Click button to generate a comment to rate.</p></div>
+
+
+
+    <div style="text-align: center; padding: 10px">
+        <button type="button" id="generateNewComment" onclick="myFunction()">New Comment</button>
+    </div>
+
+
+
+    <div class="rating-buttons" onclick="updateRating()">
+        <button class="button">-2</button>
+        <button class="button">-1</button>
+        <button class="button">0</button>
+        <button class="button">1</button>
+        <button class="button">2</button>
+    </div>
+
+    <p id="feedback"></p>
+
+    <hr>
+    <p id="criteria">
+            Criteria are listed here:
+        <ul style="list-style-type: square;">
+            <li class = "criteria_item">Toxicity, swearing, ...</li>
+            <li class = "criteria_item">Thought provoking questions ...</li>
+            <li class = "criteria_item">Adding levels to conversation ...</li>
+        </ul>
+
+    </p>
+
+   {% if user.is_authenticated %}
+     <li>User: {{ user.get_username }}</li>
+     <li><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
+   {% else %}
+     <li><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>
+   {% endif %}
+</body>
+</html>
