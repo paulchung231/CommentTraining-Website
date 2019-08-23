@@ -1,0 +1,89 @@
+body {
+}
+
+h1 {
+    color: darkgray;
+    text-align: center
+}
+
+
+#instructions {
+    padding: 20px;
+}
+
+p {
+    text-align: center;
+    color: black;
+}
+
+#comment_block {
+    margin: auto;
+    background-color: azure;
+    width: 60%;
+}
+
+#comment {
+    text-align: left;
+    width: 80%;
+    height: 100px;
+    overflow: scroll;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+#generateNewComment {
+    background-color: lightgrey;
+    border: 2px solid white;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.button {
+    background-color: cornflowerblue;
+    border: 2px solid white;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.button:hover {
+    background-color: white;
+    color: cornflowerblue;
+    border: 2px solid cornflowerblue;
+}
+
+.button:active {
+    background-color: white;
+    color: cornflowerblue;
+    border: 2px solid cornflowerblue;
+}
+
+.button:focus {
+    background-color: white;
+    color: cornflowerblue;
+}
+
+.rating-buttons {
+    text-align: center;
+}
+
+#criteria {
+    color: darkslategray;
+}
+
+.criteria_item {
+    margin-bottom: 10px;
+}

@@ -1,0 +1,5 @@
+Username: admin
+Password: commentsResearch
+
+Username: rater
+Password: raterpassword
