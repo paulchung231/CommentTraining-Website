@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>NYT Comment Rating Test Front End</title>
+    <link rel="stylesheet" href="trainingStyle.css">
+    <script src="trainingJs.js"></script>
+
+</head>
+<!--<body style="background-color: aliceblue">-->
+<body style="font-family: 'Helvetica Neue'">
+
+    <h1>NYT Comment Engagement Training</h1>
+
+    <hr> <!-- Thematic break-->
+
+    <p id="instructions">Use this interface to rate the level of engagement of a random initial comment from the New York Times.</p>
+
+    <div id="comment_block"><p id="comment">Click button to generate a comment to rate.</p></div>
+
+
+
+    <div style="text-align: center; padding: 10px">
+        <button type="button" id="generateNewComment" onclick="myFunction()">New Comment</button>
+    </div>
+
+
+
+    <div class="rating-buttons">
+        <button class="button">-2</button>
+        <button class="button">-1</button>
+        <button class="button">0</button>
+        <button class="button">1</button>
+        <button class="button">2</button>
+    </div>
+
+    <p id="criteria">
+            Criteria are listed here:
+        <ul style="list-style-type: square;">
+            <li class = "criteria_item">Toxicity, swearing, ...</li>
+            <li class = "criteria_item">Thought provoking questions ...</li>
+            <li class = "criteria_item">Adding levels to conversation ...</li>
+        </ul>
+
+    </p>
+</body>
+</html>
